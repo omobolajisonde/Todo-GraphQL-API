@@ -1,0 +1,28 @@
+{
+  "name": "todoAPI",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.20.1"
+  },
+  "description": "Mid Level Back-End Developer Task",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Sonde Omobolaji Hameen",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "graphql-tools": "^9.0.1",
+    "mongoose": "^7.0.3",
+    "apollo-server-express": "^3.12.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
