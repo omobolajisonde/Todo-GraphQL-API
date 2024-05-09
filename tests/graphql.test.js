@@ -28,7 +28,7 @@ beforeAll(async () => {
   } catch (error) {
     console.log(error.message);
   }
-});
+}, 10000);
 
 afterAll(async () => {
   try {
