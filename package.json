@@ -5,11 +5,11 @@
     "node": ">=14.20.1"
   },
   "description": "Mid Level Back-End Developer Task",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "author": "Sonde Omobolaji Hameen",
   "license": "ISC",
