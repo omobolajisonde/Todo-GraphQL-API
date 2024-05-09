@@ -1,12 +1,9 @@
-const express = require("express");
 require("dotenv").config();
 const { ApolloServer } = require("apollo-server-lambda");
 
 const typeDefs = require("./typeDefs");
 const resolvers = require("./resolvers");
 const connectToDB = require("./db");
-
-const app = express();
 
 (async () => {
   try {
