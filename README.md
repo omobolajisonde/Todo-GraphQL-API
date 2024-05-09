@@ -1,11 +1,11 @@
-# Mid Level Back-End Developer
+# Mid Level Back-End Developer Task
 
 ## Tech Stack
 ### Main Dependencies
- * **node.js** and **express** as the JavaScript runtime environment and server framework.
+ * **node.js** as the JavaScript runtime environment.
  * **mongodb** as a database of choice.
  * **mongoose** as an ODM library of choice.
- * **apollo-server-express** as the GraphQL server of choice.
+ * **apollo-server-lambda** AWS Lambda integration of GraphQL Server.
  * **graphql**- a query language for APIs.
  * **graphql-tools**- includes useful tools to create, test and manipulate GraphQL schemas.
  * **jest**- JavaScript Testing Framework.
@@ -15,7 +15,8 @@
   ```sh
   ├── README.md *** Instructions on how to set-up the project locally and API reference.
   ├── package.json *** The dependencies to be installed with "npm install"
-  ├── server.js *** Entry point of the app
+  ├── cloudformation.yml *** Provisions a GraphQL server on AWS Lambda, integrating it with API Gateway for RESTful access.
+  ├── index.js *** Entry point of the app
   ├── typeDefs.js
   ├── resolvers.js
   ├── db.js
@@ -37,7 +38,7 @@ To be able to get this application up and running, ensure to have [node](https:/
 ### Development Setup
 1. **Download the project locally by forking this repo and then clone or just clone directly via:**
 ```bash
-git clone https://github.com/omobolajisonde/Backdrop-EC.git
+git clone https://github.com/omobolajisonde/Todo-GraphQL-API.git
 ```
 2. **Create a .env file just like the example.env**
 
@@ -66,17 +67,6 @@ git clone https://github.com/omobolajisonde/Backdrop-EC.git
 npm install
 ```
 
-5. **Run the development server:**
-```bash
-npm run dev
-```
-1. **At this point, your server should be up and running** at [http://127.0.0.1:5000/](http://127.0.0.1:5000/) or [http://localhost:8080](http://localhost:8080)
-
----
-
-## Viewing the application in a browser
-Visit http://127.0.0.1:5000/ or http://localhost:8080/ on your browser.
-
 ---
 ## Testing
 In order to run tests, navigate to the root directory and run the following commands:
@@ -88,7 +78,7 @@ npm test
 
 ## API Reference
 ### Endpoints
-`/graphql`
+POST `/graphql`
 
 ### Query Types
 `getTodo`
@@ -154,7 +144,7 @@ mutation {
 }
 ```
 ## Deployment
-https://backdrop-ec.onrender.com
+https://wuhghmiooe.execute-api.us-east-2.amazonaws.com/v1/graphql
 
 ## Authors
 [Sonde Omobolaji](https://github.com/omobolajisonde) 

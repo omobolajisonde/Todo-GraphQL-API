@@ -16,8 +16,8 @@ Resources:
     Properties:
       Code:
         S3Bucket: !Ref BucketName
-        S3Key: Todo-GraphQL-API.zip
-      Handler: Todo-GraphQL-API/index.handler
+        S3Key: TodoGraphQLAPI.zip
+      Handler: TodoGraphQLAPI/index.handler
       Description: GraphQL Apollo Server
       Role: !GetAtt LambdaExecutionRole.Arn
       Runtime: nodejs20.x
@@ -65,10 +65,10 @@ Resources:
       RestApiId: !Ref GraphQLApi
       ResourceId: !Ref GraphQLApiResource
       AuthorizationType: NONE
-      HttpMethod: GET
+      HttpMethod: ANY
       Integration:
         Type: AWS_PROXY
-        IntegrationHttpMethod: GET
+        IntegrationHttpMethod: ANY
         Uri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaFunction.Arn}/invocations
 
   GraphQLApiDeployment:
