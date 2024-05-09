@@ -1,5 +1,7 @@
 # Mid Level Back-End Developer Task
 
+![sampleRequest](./sampleRequest.png)
+
 ## Tech Stack
 ### Main Dependencies
  * **node.js** as the JavaScript runtime environment.
@@ -144,7 +146,7 @@ mutation {
 }
 ```
 ## Deployment
-https://wuhghmiooe.execute-api.us-east-2.amazonaws.com/v1/graphql
+https://jq7m93cx3e.execute-api.us-east-2.amazonaws.com/v1/graphql
 
 ## Authors
 [Sonde Omobolaji](https://github.com/omobolajisonde) 
